@@ -2,6 +2,7 @@
 '''Generate Random Words'''
 from random import randint
 from time import sleep
+from sys import stdout
 from random_word import RandomWords
 
 def main():
@@ -13,7 +14,7 @@ def main():
         words = []
         for x in range(number_of_words):
             words.append(r.get_random_word())
-        print(' '.join(words))
+        stdout.write(' '.join(words)+ '\n')
         sleep(sleep_seconds)
 
 if __name__ == '__main__':
